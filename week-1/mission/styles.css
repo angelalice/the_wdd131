@@ -1,0 +1,28 @@
+body{
+    text-align: center;
+}
+#content{
+    margin: 50px 160px 50px 160px;
+}
+hr{
+    border-color:#808080;
+    width:51%;
+}
+#intro{
+    margin: 45px 250px 25px 250px;
+    text-align: left;
+}
+#list_lead{
+    margin: 10px 250px 25px 250px;
+    text-align: left;
+}
+#statements{
+    margin: 20px 265px 50px 265px;
+    text-align: left;
+}
+#list li{
+    margin-bottom:25px;
+}
+#logo{
+ width:10%;
+}
