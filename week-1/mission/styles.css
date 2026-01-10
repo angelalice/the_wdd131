@@ -4,8 +4,15 @@ body{
 #content{
     margin: 50px 160px 50px 160px;
 }
+h1, h1+p{
+    font-family: "PlayFair Display";
+}
+h1+p{
+    color: #006eb6;
+}
 hr{
-    border-color:#808080;
+    background-color:#140f0f;
+    opacity: 0.5;
     width:51%;
 }
 #intro{
@@ -15,6 +22,7 @@ hr{
 #list_lead{
     margin: 10px 250px 25px 250px;
     text-align: left;
+    font-style: italic;
 }
 #statements{
     margin: 20px 265px 50px 265px;
