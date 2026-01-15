@@ -5,43 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="An in-depth guide to HTML meta tags.">
     <meta name="author" content="Jane Doe">
+    <script src="dom.js"defer></script>
+    <link rel ="stylesheet" href="dom.css">
     <title>Ponder</title>
+
 </head>
 <body>
-    <style> 
-        body{
-           text-align: center;
-           justify-content: center;
-           margin: 50px;
-        }
-        #topics{
-          width: 430px;
-          margin-left: 410px;
-          margin-right: 400px;
-        }
-        h1 + p{
-            color:rgb(100, 100, 240);
-            font-weight: bold;
-        }
-        hr{
-            border-color:rgb(100, 100, 240);
-            width: 35%
-         
-        }
-        .list{ 
-            padding:0px;
-            margin-left:65px;
-        }
-        .list li{
-           list-style-type:none;
-           text-align: left;
-        }
-        img{
-            width:27%;
-            height: auto;
-        }
 
-    </style>
     <div id="content">
         <h1>HTML, CSS, and JS</h1>
         <p>The foundational technologies that power websites and web applications</p>
@@ -64,7 +34,6 @@
                 <li>Without JavaScript nothing on the page responds dynamically to user actions.</li>
             </ul>
         </div>
-
         
         <label for="webdevlist">Choose One:</label>
         <select name="code" id="webdevlist">
@@ -75,21 +44,6 @@
         </select>                   
             
     </div>
-    <script>
-        let selectElem = document.getElementById('webdevlist');
-        selectElem.addEventListener('change', function(){
-        let codeValue = selectElem.value;
-        if(codeValue === "html"){
-            document.getElementById("topics").childNodes[1].textContent = "Knock knock. Who's there? Dishes. Dishes who? Dishes a great time to tell you a joke!";
-            
-        }else if(codeValue === "css"){
-            document.querySelector("h1").style.fontSize = "2em";
-            document.querySelector("h1").style.color = "pink";
-
-        }else if(codeValue === "js"){
-            document.getElementsByClassName("list")[0].style.backgroundColor = "yellow";
-        }   }) 
-    </script>
-       
+  
 </body>
 </html>
