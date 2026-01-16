@@ -1,7 +1,8 @@
 body{
-    text-align: center;
+    
 }
 #content{
+    text-align: center;
     margin: 50px 160px 50px 160px;
 }
 h1, h1+p{
@@ -33,4 +34,7 @@ hr{
 }
 #logo{
  width:10%;
+}
+#page_mode{
+   margin: 3%;
 }

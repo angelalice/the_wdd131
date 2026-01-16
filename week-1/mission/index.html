@@ -7,7 +7,7 @@
     <meta name="description" content="Practicing HTML meta tags.">
     <meta name="author" content="BYUI Mission Statement">
     <link rel="stylesheet" href="styles.css">
-
+    <script src="mission.js" defer> </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
@@ -15,7 +15,13 @@
 </head>
 
 <body>
-    <div id="content">
+    <select id="page_mode">
+            <option value="neutral">---Modes---</option>
+            <option value="light">Light Mode</option>
+            <option value ="dark">Dark Mode</option>
+    </select>
+
+    <div id="content">    
         <h1> Mission Statement </h1>
         <p> Brigham Young University-Idaho</p>
         <hr>
