@@ -77,4 +77,22 @@ footer {
 }
 
 
+/*For media queries    
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto;
+}
+nav.active a{
+display :block}
+
+const nav = document.querySelector('nav')
+const toggleButton = document.querySelector('.menuButton')
+
+toggleButton.addEventListener('click',() =>{
+nav.classList.toggle('active');
+});
+
+
+ */
           
