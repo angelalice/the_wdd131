@@ -2,6 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: Roboto, sans-serif;
 }
 header,
@@ -16,16 +18,20 @@ footer {
 h1 {
     text-align: center;
 }
-section {
+section{
   padding: 20px;
   background-color: white;
   margin: 1em;
   border: 1px solid #ccc;
 }
+nav{
+   display: none;
+   text-align: center;
+}
 nav a {
     padding: 20px;
     color: black;
-    visibility: hidden;
+    display: block;
 }
 nav a:hover {
     text-decoration: none;
@@ -45,35 +51,51 @@ nav a:hover {
 footer {
     text-align: center;
 }
+nav.active{
+    display: block;
+}
 
-@media screen and (min-width: 700px) {
+.menu-btn .bar1 {
+  transform: translate(0, 8px) rotate(-45deg);
+}
+.menu-btn .bar2 {
+    opacity: 0;
+}
+.menu-btn .bar3 {
+  transform: translate(0, -10px) rotate(45deg);
+}
+          
+
+@media screen and (min-width:700px) {
     main{
-        display:flex;
-        flex-direction: row;
-        flex-wrap: wrap; 
-    }
-    section{
-        display: inline-block;
-        width:330px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
     .menu-btn{
         display:none;
     }
-    nav a{
-        visibility: visible;
-        font-size: 1.2em;
-        font-style: italic;
-    }
     nav{
         text-align: right;
     }
-
-}
-
-@media screen and (min-width: 1030px) {
-    main{
-        flex-wrap: nowrap;
+    nav a{
+        text-align: right;
+        display: inline-block;
     }
+
+}
+@media screen and (min-width:1000px) {
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+   
 }
 
-          
+/* 
+function add(a,b){
+ return a+b;
+}
+const subtract = (a,b) =>{
+    return a +b;
+}
+*/
