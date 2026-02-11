@@ -8,7 +8,6 @@
 #student_names{
     list-style: none;
 }
-    */
 .student_info{
     padding: 5px;
     border : 2px rgb(242, 199, 150) dotted;
@@ -29,6 +28,7 @@
     #student_names{
        display: flex;
        gap: 2rem;
+       border : 2px rgb(245, 165, 191) dotted;
     }
 }
 
