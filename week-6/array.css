@@ -1,0 +1,34 @@
+#main-content{
+    margin: 5% 20% 5% 20%;
+    align-content: center;
+    border : 4px lightcoral solid;
+    padding: 25px;
+}
+
+#student_names{
+    list-style: none;
+}
+    */
+.student_info{
+    padding: 5px;
+    border : 2px rgb(242, 199, 150) dotted;
+    margin: 15px;
+}
+.top{
+    margin: 15px;
+    padding: 5px;
+    border : 2px rgb(145, 246, 157) dotted;
+}
+.favorites{
+    margin: 15px;
+    padding: 5px;
+    border : 2px rgb(169, 197, 249) dotted;
+}
+
+@media (min-width:900px){
+    #student_names{
+       display: flex;
+       gap: 2rem;
+    }
+}
+
