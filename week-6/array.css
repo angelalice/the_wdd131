@@ -28,7 +28,6 @@
     #student_names{
        display: flex;
        gap: 2rem;
-       border : 2px rgb(245, 165, 191) dotted;
     }
 }
 
