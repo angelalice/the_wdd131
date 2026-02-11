@@ -24,7 +24,7 @@
     border : 2px rgb(169, 197, 249) dotted;
 }
 
-@media (min-width:900px){
+@media (min-width:1045px){
     #student_names{
        display: flex;
        gap: 2rem;
