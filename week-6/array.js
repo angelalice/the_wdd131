@@ -73,7 +73,7 @@ const oldest = ages.filter((age)=>{
 })
 
 const ul = document.getElementById("oldest_students")
-for(let i = 0; i < 1; i++){
+for(let i = 0; i <= 0; i++){
     const li = document.createElement('li');
     li.textContent = oldest;
     ul.appendChild(li);

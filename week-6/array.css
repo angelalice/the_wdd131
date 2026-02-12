@@ -26,6 +26,15 @@
     border : 5px rgb(169, 197, 249) dotted;
     border-radius: 2%;
 }
+.age{
+    margin: 15px;
+    padding: 5px;
+    border : 5px rgb(192, 164, 252) dotted;
+    border-radius: 2%;
+}
+#oldest_students{
+    list-style: none;
+}
 
 @media (min-width:1045px){
     #student_names{
