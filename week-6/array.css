@@ -10,18 +10,21 @@
 }
 .student_info{
     padding: 5px;
-    border : 2px rgb(242, 199, 150) dotted;
+    border : 5px rgb(242, 199, 150) dotted;
     margin: 15px;
+    border-radius: 2%;
 }
 .top{
     margin: 15px;
     padding: 5px;
-    border : 2px rgb(145, 246, 157) dotted;
+    border : 5px rgb(145, 246, 157) dotted;
+    border-radius: 2%;
 }
 .favorites{
     margin: 15px;
     padding: 5px;
-    border : 2px rgb(169, 197, 249) dotted;
+    border : 5px rgb(169, 197, 249) dotted;
+    border-radius: 2%;
 }
 
 @media (min-width:1045px){

@@ -35,11 +35,13 @@ const students = [
     {last: 'Hudson', first: 'Leo', grade : 'F'}
 ];
 
+//Creates an array of student objects
+const ages = [9, 10, 9, 11, 12, 12];
+
 //Adds fruits to screen
 let html = "";
 words.forEach((word) =>{
      html += `<li> ${word}</li>`
-     console.log(word);
 });
 
 
@@ -49,7 +51,6 @@ let replace = "";
 //Adds student names to the screen
 students.forEach( (name) =>{
     replace += `<li> ${ name.first} ${name.last} </li>`
-    console.log(name);
 })
 
 document.querySelector("ul#student_names").innerHTML = replace;
@@ -59,12 +60,35 @@ let show = " ";
 students.forEach( (student)=>{
    let grade = student.grade;
    let newGrade = convert(grade);
-   if(newGrade >=4){
-    show += `<li> ${student.first} ${student.last} : ${newGrade} points </li>`
-   }
-   console.log(show);
+ 
+    if(newGrade >=4){
+        show += `<li> ${student.first} ${student.last} : ${newGrade} points </li>`
+    }
 })
 document.querySelector("ul#top_students").innerHTML = show;
 
+//Displays the oldest kids
+const oldest = ages.filter((age)=>{
+    return age > 10;
+})
+
+const ul = document.getElementById("oldest_students")
+for(let i = 0; i < 1; i++){
+    const li = document.createElement('li');
+    li.textContent = oldest;
+    ul.appendChild(li);
+}
+
+// Creates a new array that doubles all the students ages
+const doubleAge = ages.map((age)=>{
+    return age * 2;
+})
+console.log("Students Double Age: " + doubleAge);
+
+//Creates a new array that get the total sum of the students ages
+const totalAge = ages.reduce((total,age)=>{
+    return total + age
+})
+console.log("Students Total Age: " + totalAge);
 
 

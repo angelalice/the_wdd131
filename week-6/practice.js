@@ -1,4 +1,4 @@
-/* In class learning */
+/* In class learning tuesday */
 
 // Map creates a new array but doesn't affect the previous array
 /*
@@ -46,3 +46,12 @@ const sum = numbers.reduce( (num, total) =>{
 })
 console.log(num);
 */
+
+// In class learning thursday
+
+const ul = document.getElementsByID("fruit-list");
+fruits.forEach((fruits)=>{
+    const li = document.createElement('li');
+    li.textContent = fruits;
+    ul.appendChild(li);
+})
