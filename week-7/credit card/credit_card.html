@@ -18,20 +18,20 @@
             <p id="totalLabel"> TOTAL: $199 </p>
 
             <!-- Credit Card Icon-->
-            <p id="card-icon">💳</p>
+            <p id="card-icon" aria-hidden="true">💳</p>
 
             <!-- Container for credit card details -->
-            <p id="creditCardNumberContainer" role="region" aria-labelledby="creditCardLabel">
+            <div id="creditCardNumberContainer" aria-labelledby="creditCardLabel">
                 <label id="creditCardLabel" for="creditCardNumber">CARD NUMBER</label>
                 <input
                 type="text"
                 id="creditCardNumber"
                 name="creditCardNumber"
                 pattern="[0-9]{16}"
-                placeholder="1234 5678 9101 1020"
+                placeholder="1234567891011020"
                 required
                 />
-            </p>
+            </div>
 
             <!-- Info for the Card Holder -->
             <div id ="cardHolderContainer">
