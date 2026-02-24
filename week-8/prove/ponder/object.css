@@ -1,0 +1,30 @@
+body{
+    justify-items: center;
+}
+
+#wrapper{
+    text-align: center;
+    justify-content: center;
+    width: 650px;
+    border-radius: 25px;
+    border: 7px solid indigo;
+    margin-top: 60px;
+    box-shadow: 15px 10px 10px rgb(198, 177, 239);
+}
+table{
+    justify-self: center;
+    padding: 15px;
+}
+tr{
+    padding:35px;
+}
+.header{
+    margin-right: 15px;
+    margin-left: 15px;
+}
+#sections{
+    padding:10px;
+}
+h2:hover{
+    transform:scale(1.2);
+}
