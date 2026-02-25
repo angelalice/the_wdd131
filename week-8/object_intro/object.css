@@ -29,3 +29,10 @@ tr{
 h2:hover{
     transform:scale(1.2);
 }
+
+@media(max-width: 600px){
+    #wrapper{
+        width: 350px;
+    }
+
+}
