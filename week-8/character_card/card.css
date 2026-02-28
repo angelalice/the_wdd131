@@ -15,15 +15,25 @@
   .image{
     width: 400px;
     border-radius: 15px 15px 0 0;
-    }
+  }
 
-  .name {
+  .character_name {
     font-size: 1.5em;
     font-weight: bold;
     margin: -4px 0 20px 0;
-    color: white;
     padding: 15px 0 15px 35px;
-    background-color: #5d747b;
+    background-color: rgb(58, 44, 120);
+  }
+  h3{
+    margin : 0px;
+  }
+  #diedMessage{
+    background-color: rgb(244, 72, 72);
+    text-align: center;
+  }
+
+  .name{
+    color: white;
   }
 
   .stats {
@@ -45,7 +55,7 @@
     margin: 20px;
     border: none;
     border-radius: 8px;
-    background-color: #5d747b;
+    background-color: rgb(150, 110, 50);
     color: white;
     font-weight: bold;
     cursor: pointer;

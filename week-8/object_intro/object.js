@@ -43,3 +43,10 @@ document.querySelector("#enrollStudent").addEventListener("click", function () {
 //Add new sections to the code
 aCourse.sections.push({ sectionNum: 3, roomNum: 'STC 398', enrolled: 0, days: 'TTh', instructor: 'Bro K'});
 renderSections(aCourse.sections);
+
+/*  
+
+
+
+
+*/
