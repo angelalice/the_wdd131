@@ -68,16 +68,3 @@ function addName(){
 }
 addName();
 addInfo();
-
-/* 
-1) Create new object ^
-2) Create properties for the object ^
-3) Create methods for the object
-4) Methods have to add or subtract points to the function when the button is clicked
-5) Add new info to the page
-    - Get content
-    - Set content
-6) When character dies have the Dead statement pop up  
-7) Bonus: When the character clicks one of the skills they should get a certain amount of points added
-
-*/ 
