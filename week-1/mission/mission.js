@@ -1,20 +1,24 @@
 let content = document.querySelector("body");
-let selectElement = document.querySelector("#page_mode");
-let newLogo = document.getElementById("logo");
+let selectElem = document.getElementById('page_mode');
+let newlogo = document.querySelector('logo');
 
-selectElement.addEventListener("change",changeMode);
+selectElem.addEventListener('change', changeTheme);
 
-function changeMode() {
-    let curr = selectElement.value;
-    if (curr === "dark"){
+function changeTheme() {
+    let current = selectElem.value;
+    if (current == 'dark') {
+        // code for changes to colors and logo
         content.style.backgroundColor = "black";
         content.style.color = "white";
-        newLogo.src = "byui-logo-white.png";
-        newLogo.style.width = "10%";
-    }else if(curr === "light" || curr == "neutral") {
-      content.style.backgroundColor = "white";
-      content.style.color = "black";
-      newLogo.src = "byui-logo-blue.webp";
-      newLogo.style.width = "10%";
+        newlogo.src= "byui-logo-white.png"
+        newlogo.style.width = "10%";
+    } else {
+        // code for changes to colors and logo
+        content.style.backgroundColor = "white";
+        content.style.color = "black";
+        newlogo.src= "byui-logo-blue.webp";
+        newlogo.style.width = "10%";
+
     }
-}
+}           
+                    
