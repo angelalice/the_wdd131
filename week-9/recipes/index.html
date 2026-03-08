@@ -35,16 +35,22 @@
 </head>
 <body>
     <!--Add book image in front of h1-->
-    <h1>Recipe Book</h1>
+    <div id="header">
+        <img id="logo" src="images/recipe-book.png" alt="Recipe Book Logo">
+        <h1>RecipeBook</h1>
+    </div>
+    
 
     <main id="content">
         <!--Create form and label for input-->
         <div class="search-container">
             <input type="text" id="search" placeholder="Find a recipe">
-            <img src="search-icon.png" alt="search icon" class="search-icon">
+            <hr id="search-decor"> 
+            <img src="images/search.svg" alt="search icon" class="search-icon">
         </div>
            
-        <hr>
+        <hr id="content-spacer">
+
         <section id="main_info">
            <img id="apple" src = "images/apple-crisp.jpg" alt = "Image of apple crisp and vanilla ice cream">
            

@@ -4,6 +4,17 @@
     margin: auto;
     width: 50%;
 }
+#header{
+    display:flex;
+    gap:5px;
+    justify-self: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+#logo{
+    width: 50px;
+    height: auto;
+}
 h1{
   font-family: "Amatic SC", sans-serif;
   font-weight: 400;
@@ -20,6 +31,33 @@ p{
     width: 100%;
     border: 2px black solid;
     border-radius: 5px;
+}
+.search-container{
+    position: relative;
+    width: 90%;
+    margin: 0;
+}
+
+.search-container input{
+    width: 100%;
+    padding-right: 20px; 
+    height: 30px;
+}
+.search-icon{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    pointer-events: none;
+}
+#search-decor
+{
+    transform:rotate(180deg);
+    width: 10px;
+    transform: translateY(-50%);
+    right: 10px;
+
 }
 #apple{
     width: 100%;
@@ -51,6 +89,9 @@ footer{
     font-size: small;
     text-align: center;
 }
+.icons{
+    border-radius: 2px;
+}
 
 @media (min-width: 600px){
     #content{
@@ -80,8 +121,33 @@ footer{
     .social{
         margin-left: auto;
         display:flex;
-        gap: 10px;
+        gap: 2px;
+        margin-right: 100px;
 
     }
+    .search-container{
+        position: relative;
+        width: 65%;
+        margin: 0;
+    }
+    p{
+        font-size: 30px;
+        margin: 0;
+    }
+    .search-container input{
+        width: 100%;
+        padding-right: 20px; 
+        height: 30px;
+    }
+
+    .search-icon{
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        pointer-events: none;
+   }
+
 
 }
