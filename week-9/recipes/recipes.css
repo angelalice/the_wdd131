@@ -1,0 +1,87 @@
+
+#content{
+    justify-items: center;
+    margin: auto;
+    width: 50%;
+}
+h1{
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+p{
+  font-family: "Amatic SC", sans-serif;
+  color:rgb(101, 158, 211);
+  font-weight: 800;
+
+}
+#search{
+    width: 100%;
+    border: 2px black solid;
+    border-radius: 5px;
+}
+#apple{
+    width: 100%;
+    justify-self: center;
+    margin: auto;
+}
+.icons{
+    width: 100%;
+    margin: 10px;
+}
+button{
+    display: block;
+}
+#main_info{
+  border: 2px black solid;
+  border-radius: 15px;
+  padding: 10px;
+  width: 200px;
+  
+}
+.social{
+    width: 90px;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    justify-self: center;
+}
+footer{
+    font-size: small;
+    text-align: center;
+}
+
+@media (min-width: 600px){
+    #content{
+        width: 600px;
+    }
+    #main_info{
+        border: 2px black solid;
+        border-radius: 15px;
+        padding: 10px;
+        display: flex;
+        align-items:flex-start;
+        gap: 15px;
+        width: 400px;
+    }
+    #apple{
+        width: 250px;
+        height: auto;
+    }
+    #dessert_rating{
+        display: flex;
+        flex-direction: column;
+    }
+    button{
+        margin-bottom: 20px;
+        width: fit-content;
+    }
+    .social{
+        margin-left: auto;
+        display:flex;
+        gap: 10px;
+
+    }
+
+}
