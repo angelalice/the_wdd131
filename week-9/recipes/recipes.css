@@ -24,7 +24,7 @@ h1{
   font-style: normal;
   text-align: center;
 }
-p{
+h2{
   font-family: "Amatic SC", sans-serif;
   color:rgb(101, 158, 211);
   font-weight: 800;
@@ -54,6 +54,9 @@ p{
     width: 20px;
     margin: 0px;
     padding: 0px;
+}
+label{
+    display: none;
 }
 #search-decor
 {
