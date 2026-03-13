@@ -31,7 +31,7 @@ const deadMessage = document.getElementById("diedMessage");
 
 /* Event Listener for the attacked button*/
 attackedBtn.addEventListener("click", function(){
-   character.attacked();[]
+   character.attacked();
    addInfo();
 });
 

@@ -41,7 +41,7 @@ const movies = [
         stars: "⭐⭐⭐⭐"
       }
     ];
-
+3
     const moviesList = document.getElementById("movie-list");
 
     movies.forEach(movie => {

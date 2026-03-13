@@ -1,0 +1,137 @@
+
+#searchSection{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-self: center;
+    /*border: 10px solid bisque;*/
+    margin-bottom: 10px;
+}
+main{
+    background-color: rgb(232, 244, 254);
+    width: 70%;
+    text-align: center;
+    border: 5px solid rgb(89, 151, 237);
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 25px;
+    padding: 20px;
+    box-shadow: 10px 5px rgb(84, 137, 211);
+}
+input{
+    width: 40%;
+}
+#searchBtn{
+    margin-top: 20px;
+    margin: auto;
+}
+button{
+    width: fit-content;
+    border: 2px solid rgb(57, 55, 55);
+    border-radius: 5px;
+    box-shadow: 2px 2px rgb(69, 71, 71);
+    background-image: linear-gradient(90deg, rgb(196, 193, 193),lightgrey)
+}
+button:hover{
+    transform: scale(1.2);
+}
+#hike-container{
+    margin: auto;
+    padding: 10px;
+    width: 95%;
+    background-color: rgb(251, 251, 230);
+    border-radius: 10px;
+}
+.hike-card{
+    padding:5px;
+}
+.hike-tags{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+img{
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+}
+#distance{
+    font-style: italic;
+}
+.directionBtn{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-weight: bold;
+}
+dialog{
+    width: 50%;
+}
+
+
+@media (min-width:600px){
+    #searchSection{
+        display: flex;
+        gap: 5px;
+        justify-self: center;
+        /*border: 10px solid bisque;*/
+        margin-bottom: 10px;
+        
+    }
+    main{
+        background-color: rgb(232, 244, 254);
+        width:500px;
+        text-align: center;
+        border: 5px solid rgb(89, 151, 237);
+        border-radius: 5px;
+        margin: auto;
+        margin-top: 25px;
+        padding: 20px;
+        box-shadow: 10px 5px rgb(84, 137, 211); 
+    }
+    button{
+        width: fit-content;
+        border: 2px solid rgb(57, 55, 55);
+        border-radius: 5px;
+        box-shadow: 2px 2px rgb(69, 71, 71);
+        background-image: linear-gradient(90deg, rgb(196, 193, 193),lightgrey)
+    }
+    button:hover{
+        transform: scale(1.2);
+    }
+    #hike-container{
+        margin: auto;
+        padding: 10px;
+        width: 300px;
+        background-color: rgb(251, 251, 230);
+        border-radius: 10px;
+    }
+    .hike-card{
+        padding:5px;
+    }
+    .hike-tags{
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    img{
+        border-radius: 10px;
+        width: 150px;
+        height: 150px;
+    }
+    #distance{
+        font-style: italic;
+    }
+    .directionBtn{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-style: italic;
+        font-weight: bold;
+    }
+    dialog{
+        width: 500px;
+    }
+
+}
