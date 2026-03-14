@@ -30,6 +30,7 @@
 
     <!-- Connects files to the HTML -->
     <link rel ="stylesheet" href="recipes.css">
+    <script src="recipes.js" defer></script>
     
     <title>Recipe Book</title>
 </head>
@@ -48,33 +49,20 @@
                 <label for="search" class="visually-hidden">Search for recipe</label>
                 <input type="text" id="search" placeholder="Find a recipe">
                 <hr id="search-decor"> 
-                <img src="images/search.svg" alt="search icon" class="search-icon">
+                
+                <button id="forSearch" type = "button">
+                    <img src="images/search.svg" alt="search icon" class="search-icon">
+                </button>
             </div>
             
             <hr id="content-spacer">
 
-            <article id="main_info">
-                <img id="apple" src = "images/apple-crisp.jpg" alt= "Image of apple crisp and vanilla ice cream">
-            
-                <div id="dessert_rating">
-                    <button>dessert</button>
-
-                    <!--Dessert Name-->
-                    <h2>Apple Crisp</h2>
-                    
-                    <!--Dessert Rating-->               
-                    <span class="rating"role="img" aria-label="Rating: 4 out of 5 stars">
-                        <span aria-hidden="true" class="icon-star">⭐</span>
-                        <span aria-hidden="true" class="icon-star">⭐</span>
-                        <span aria-hidden="true" class="icon-star">⭐</span>
-                        <span aria-hidden="true" class="icon-star">⭐</span>
-                        <span aria-hidden="true" class="icon-star-empty">☆</span>
-                    </span>
-                    
-                    <p class="description">This apple crisp recipe is a simple yet delicious fall<br> dessert that's great served with vanilla ice cream. </p>
-                </div>
+            <article id="food_container"> </article>
+              
+        </div> 
+                
                
-            </article>
+           
        </div>  
 
     </main>

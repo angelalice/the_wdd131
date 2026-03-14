@@ -36,6 +36,7 @@ h2{
 }
 .search-container{
     position: relative;
+    
     margin: 0;
 }
 
@@ -52,19 +53,6 @@ h2{
     width: 20px;
     margin: 0px;
     padding: 0px;
-}
-#forSearch{
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    margin: 0px;
-    padding: 0px; 
-    background: none;
-    cursor: pointer;
-    border: none;
 }
 label{
     display: none;
@@ -88,7 +76,7 @@ label{
     border-top: 1px solid black;
     margin: 15px 0;
 }
-.food-img{
+#apple{
     width: 100%;
     justify-self: center;
     margin: auto;
@@ -102,16 +90,15 @@ label{
 .description{
     display: none;
 }
-.food-tags{
+button{
     display: block;
 }
-.food_card{
+#main_info{
   border: 2px black solid;
   border-radius: 15px;
   padding: 10px;
   width: 200px;
-  margin: 15px;
-  gap:15px;
+  
 }
 .social{
     width: 90px;
@@ -131,49 +118,28 @@ footer{
     #content{
         width: 600px;
     }
-    .food_card{
+    #main_info{
         border: 2px black solid;
         border-radius: 15px;
         padding: 10px;
         display: flex;
-        gap: 15px;
         align-items:flex-start;
-        width: 600px;
-        
+        gap: 15px;
+        width: 100%;
     }
-    .food_info{
+    #apple{
+        width: 250px;
+        height: auto;
+    }
+    #dessert_rating{
         display: flex;
         flex-direction: column;
-        flex: 1 1 auto;
-        min-width: 0;
     }
-    .food-img{
-        flex: 0 0 200px;
-        max-width: 200px;
-        height: auto;
-        object-fit: cover;
-    }
-    /*Order items */
-    .food_info .food-tags{
-        margin: 0 0 6px 0;
-        width: fit-content; 
-        order: 1; 
-    }
-    .food_info h2{
-       order: 2;
-    }
-    .food_info .rating{
-       margin: 5px 0; 
-       order: 3;
-    }
-    .food_info .description{
-        font-size: 10px;
-        font-family: 'Times New Roman', Courier, monospace;
-        margin-top: 6px;
-        color: black;
-        order: 4;
-        min-height: 1px;
-        display: block;
+    button{
+        margin-top: 15px;
+        margin-bottom: 20px;
+        width: fit-content;
+        
     }
     .social{
         margin-left: auto;
@@ -185,11 +151,11 @@ footer{
         margin: 0;
     }
     p{
-        font-size: 14px;
+        font-size: 30px;
         margin: 0;
     }
     .search-container input{
-        width: 50%;
+        width: 100%;
         padding-right: 20px; 
         height: 30px;
     }
@@ -202,7 +168,13 @@ footer{
         width: 20px;
         pointer-events: none;
    }
-   
+   .description{
+        display: inline;
+        font-size: 10px;
+        font-family: 'Times New Roman', Courier, monospace;
+        margin-top: 10px;
+        color: black;
+   }
    footer{
         display: flex;
         width: 500px;

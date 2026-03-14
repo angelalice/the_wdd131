@@ -80,8 +80,7 @@ const ratings = document.querySelector(".difficulty");
 const modal = document.querySelector("dialog");
 
 
-/*Event Listeners*/
-
+/*Event Listener*/
 searchBtn.addEventListener("click",()=>{
   /* Get info from user input */
   const phrase = searchInput.value.toLowerCase();
@@ -141,9 +140,6 @@ function render(hikes){
   //Adds the hike container to the screen
   hike_container.appendChild(div);
   });
-
-  
-  
 }
 
 /*Creates function that adds the tags*/
