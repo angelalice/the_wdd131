@@ -167,6 +167,8 @@ footer{
        min-height: 24px;
        margin: 5px 0; 
        order: 3;
+       display: flex;
+       gap: 2px;
     }
     .food_info .description{
         font-size: 10px;
