@@ -139,7 +139,7 @@ footer{
         gap: 15px;
         align-items:flex-start;
         width: 600px;
-        min-height: 350px;
+        /*min-height: 350px;*/
     }
     .food_info{
         display: flex;
@@ -155,7 +155,7 @@ footer{
     }
     /*Order items */
     .food_info .food-tags{
-        min-height: 40px;
+       /* min-height: 40px;*/
         margin: 0 0 6px 0;
         width: fit-content; 
         order: 1; 
