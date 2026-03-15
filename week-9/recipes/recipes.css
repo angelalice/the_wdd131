@@ -14,7 +14,7 @@
     margin-bottom: 15px;
 }
 #logo{
-    width: 50px;
+    width: 55px;
     height: auto;
 }
 h1{
@@ -25,7 +25,7 @@ h1{
 }
 h2{
   font-family: "Amatic SC", sans-serif;
-  color:rgb(101, 158, 211);
+  color:rgb(57, 136, 210);
   font-weight: 800;
 
 }
@@ -104,6 +104,7 @@ label{
 }
 .food-tags{
     display: block;
+    min-height: 40px;
 }
 .food_card{
   border: 2px black solid;
