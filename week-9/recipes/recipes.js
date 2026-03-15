@@ -363,7 +363,7 @@ function rating(rating){
     let html = " ";
     for (let i = 1; i <= 5; i++){
       if (i <= rating) {
-        html += `<span  aria-label="${rating.length} out of 5 stars" class="star"> ⭐ </span>`
+        html += `<span  aria-label="Rated ${rating.length} out of 5 stars" class="star"> ⭐ </span>`
       } else {
         html += `<span aria-hidden="true" class="empty-star"> ☆ </span>`
             
