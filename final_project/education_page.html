@@ -15,11 +15,25 @@
         </p>
     </section>
 
-    <article id="safety_cards">
+    <div class="search-container">
+                <label for="search" class="visually-hidden">Search for recipe</label>
+                <input type="text" id="search" placeholder="Find a recipe">
+                <hr id="search-decor"> 
+                <img src="./Recipe Book_files/search.svg" alt="search icon" class="search-icon">
+    </div>
 
+    <article id="safety_cards">
+        <section class="card_content">
+            <div class="card_tags"></div>
+        </section>
+        
     </article>
 
-
+    
+    <!--Creating modal-->
+    <dialog> 
+      <button class="close-viewer">X</button>
+    </dialog>
 
     <footer>
         <div id="mission_statement">
