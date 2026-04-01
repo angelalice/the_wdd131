@@ -253,12 +253,19 @@ const safety_info = [
 ]
 
 /* Get Elements */
-const searchInput = document.getElementById("search");
+const searchInput = document.querySelector(".search");
 const searchBtn = document.querySelector("button");
-const hike_container = document.querySelector(".hike-content");
-const tag_container = document.querySelector(".hike-tags");
-const ratings = document.querySelector(".difficulty");
+const safety_container = document.getElementById("safety_cards");
+const health_container = document.getElementById("health_cards");
+const education_container = document.getElementById("education_cards");
+const tag_container = document.querySelector(".card_tags");
 const modal = document.querySelector("dialog");
+
+/* Event Listener */
+
+
+
+
 
 
 
