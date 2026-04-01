@@ -296,7 +296,10 @@ const food_container = document.getElementById("food_container");
 const tag_container = document.querySelector(".food-tags");
 
 /* Event Listeners */
-searchBtn.addEventListener("click", ()=>{
+searchBtn.addEventListener("click", (e)=>{
+   
+	e.preventDefault();
+
     /* Get user input */
     const phrase = searchInput.value.toLowerCase();
     const names = searchFood(phrase);

@@ -294,6 +294,50 @@ function educationNameSearch(phrase){
   
 };
 
+/* Adds cards to the screen */
+function render(card){ 
+  hike_container.innerHTML = " ";
+
+  hikes.forEach((hike) =>{
+    const div = document.createElement('div');
+    div.classList.add("hike");
+    div.classList.add(hike.stub);
+
+    div.innerHTML = `
+      <h2>${hike.name}</h2>
+      <img src ="${hike.imgSrc}" alt ="${hike.imgAlt}">
+      <p>${hike.description}</p>
+      <p id ="distance">Distance: ${hike.distance}</p>
+      <button class ="directionBtn"> Directions</button>
+  `;
+
+  //Create tag container
+  const tagDiv = document.createElement("div");
+  tagDiv.classList.add("hike-tags");
+  tagBtn(hike,tagDiv);
+
+  //Adds this to the hike container to make it appear
+  div.appendChild(tagDiv)
+
+
+  //Creating difficulty div
+  const diffDiv = document.createElement("div");
+  diffDiv.classList.add("rating");
+  diffDiv.innerHTML = increaseDifficulty(hike.difficulty);
+  div.appendChild(diffDiv);
+
+  //Adds directions to modal
+  const directionBtn = div.querySelector(".directionBtn");
+
+  directionBtn.addEventListener("click", () => {
+    generateDirections(hike);
+    modal.showModal();
+  });
+
+  //Adds the hike container to the screen
+  hike_container.appendChild(div);
+  });
+}
 
 
 
