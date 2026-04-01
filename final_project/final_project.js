@@ -262,6 +262,37 @@ const tag_container = document.querySelector(".card_tags");
 const modal = document.querySelector("dialog");
 
 /* Event Listener */
+searchBtn.addEventListener("click",()=>{
+  /* Get info from user input */
+  const phrase = searchInput.value.toLowerCase();
+  const results = nameSearch(phrase);
+  render(results);
+
+});  
+
+/*Searches health cards to find the matching phrases*/
+function healthNameSearch(phrase){
+  return health_info.filter((card)=>{
+    return card.name.toLowerCase().includes(phrase);
+  })
+  
+};
+
+/*Searches safety cards to find the matching phrases*/
+function safetyNameSearch(phrase){
+  return safety_info.filter((card)=>{
+    return card.name.toLowerCase().includes(phrase);
+  })
+  
+};
+
+/*Searches education cards to find the matching phrases*/
+function educationNameSearch(phrase){
+  return education_info.filter((card)=>{
+    return card.name.toLowerCase().includes(phrase);
+  })
+  
+};
 
 
 
