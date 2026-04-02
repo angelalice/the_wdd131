@@ -1,0 +1,169 @@
+/* Navigation Bar*/
+nav{
+    display:flex;
+    justify-content: space-evenly;
+    background-color: white;
+    width:100%;
+}
+#nav_logo_section{
+    display: flex;
+    gap: 5px;
+}
+#nav_logo_section h4{
+    color: #f25f5c;
+    font-size: 20px;
+}
+#logo{
+    width: 15%;
+    height: auto;
+}
+#nav_links_container a{
+    padding: 20px;
+    color: black;
+    display: block;
+    text-decoration: none;
+}
+nav a:hover {
+    color: #616061;
+} 
+.menu-btn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: rgb(122, 119, 119);
+    margin: 5px 0;
+}
+nav.active{
+    display: block;
+}
+.menu-btn .bar1 {
+  transform: translate(0, 8px) rotate(-45deg);
+}
+.menu-btn .bar2 {
+    opacity: 0;
+}
+.menu-btn .bar3 {
+  transform: translate(0, -10px) rotate(45deg);
+}
+
+/*Home Page Header Banner*/
+#home_page_intro h1, p{
+    color:white;
+}
+#home_page_intro div{
+    width: 80%;
+}
+#home_page_intro p{
+    font-size: 20px;
+}
+#home_page_intro h1{
+    font-size: 35px;
+}
+.homeBtns{
+    font-size: 15px;
+    color: lightcoral;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#home_page_intro button:hover{
+    background-color: rgb(250, 247, 247);
+}
+#home_page_intro{
+    background-image:linear-gradient(150deg,rgb(168, 60, 182), rgb(239, 119, 237),#f25f5c,rgb(220, 175, 40));
+    padding: 25px;
+}
+
+/* Home Page Main Information */
+#home_main_info{
+    text-align: center;
+    margin: 50px;
+    margin: auto;
+    width:100%;
+}
+#nonprofit_cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+#nonprofit_cards div img{
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px lightgrey;
+}
+/* !!!! Move statements over the images */
+#nonprofit_cards div p{
+   color: black;
+}
+#nonprofit_cards div img:hover{
+    transform: scale(1.1);
+}
+/*#nonprofit_cards div img:nth-child(2){
+    border: 2px solid;
+}
+*/
+
+/* Mission Statement*/
+#home_second_info{
+    color:black;
+    padding: 10px;
+    width: 100%;
+    margin: 15px;
+}
+#mission_statement p{
+    color: black;
+    width: 80%;
+    font-size: 18px;
+}
+#mission_statement img{
+    width: 90%;
+    border-radius: 10px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+#make_a_difference{
+    text-align: center;
+    background-image:linear-gradient(150deg,rgb(168, 60, 182), rgb(239, 119, 237),#f25f5c);
+    width:100%;
+    margin-bottom: 10px;
+    padding:10px;
+}
+#make_a_difference p{
+    color:black;
+}
+#suggestionBtn{
+    
+}
+
+
+
+
+
+
+
+
+
+
+/*
+@media screen and (min-width:600px) {
+    .menu-btn{
+        display:none;
+    }
+    nav{
+        text-align: right;
+    }
+    nav a{
+        text-align: right;
+        display: inline-block;
+    }
+
+}
+*/

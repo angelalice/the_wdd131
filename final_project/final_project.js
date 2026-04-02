@@ -260,15 +260,25 @@ const health_container = document.getElementById("health_cards");
 const education_container = document.getElementById("education_cards");
 const tag_container = document.querySelector(".card_tags");
 const modal = document.querySelector("dialog");
+const nav_link = document.querySelector('.active');
+const btn = document.querySelector('.menu-btn');
+
 
 /* Event Listener */
-searchBtn.addEventListener("click",()=>{
+searchBtn.addEventListener("click",(e)=>{
+   e.preventDefault();
   /* Get info from user input */
   const phrase = searchInput.value.toLowerCase();
   const results = nameSearch(phrase);
   render(results);
 
 });  
+
+btn.addEventListener('click',() =>{
+    nav_link.classList.toggle('active');
+    
+});
+
 
 /*Searches health cards to find the matching phrases*/
 function healthNameSearch(phrase){
