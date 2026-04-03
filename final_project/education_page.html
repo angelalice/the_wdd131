@@ -3,34 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="final_project.css">
-    <script src="final_project.js" defer></script>
+    <script src="final_project.js"></script>
     <title>Education Page</title>
 </head>
 <body>
-    <nav>
-        <div class="nav_logo_section">
-            <img src="images/little_lifelines_logo.png" alt="Small hand with heart surrounding it" class="logo">
-            <h4>Little Lifelines</h4>
-        </div>
-
-        <button class="menu-btn">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </button>
-       
-        <div class="nav_links_container">
-            <a href="index.html">Home</a>
-            <a href="health_page.html">Health</a>
-            <a href="safety_page.html">Safety</a>
-            <a href="education_page.html">Education</a>
-            <a href="crisis_page.html">Crisis Resources</a>
-        </div>  
-    </nav>
     <section id="education_page_intro">
         <h2>Growing Minds & Bright Futures</h2>
         <p>Education empowers children to build the knowledge, confidence, and skills they need to grow & thrive. 
@@ -39,14 +16,10 @@
     </section>
 
     <div class="search-container">
-        <label for="edSearch" class="visually-hidden">Search for recipe</label>
-        <input type="text" id="edSearch" placeholder="Find a nonprofit">
+        <label for="search" class="visually-hidden">Search for recipe</label>
+        <input type="text" class="search" placeholder="Find a nonprofit">
         <hr class="search-decor"> 
-
-        <button class="forSearch" type = "submit" aria-label="Search">
-            <img src="images/search.svg" alt="magnifying glass icon" class="search-icon">
-        </button>
-         
+        <img src="./Recipe Book_files/search.svg" alt="search icon" class="search-icon">
     </div>
 
     <article id="education_cards">
@@ -63,44 +36,34 @@
     </dialog>
 
     <footer>
-        <div class="mission_info">
-            <div class="footer_logo_section">
-                <img src="images/little_lifelines_logo.png" alt="Small hand with heart surrounding it" class="logo">
-                <h3>Little Lifelines</h3>
+        <div id="mission_statement">
+            <div id="nav_logo_section">
+                <img src="images/little_lifelines_logo" alt="Small hand with heart surrounding it">
+                <h4>Little Lifelines</h4>
             </div>
 
             <p>Empowering children through education, health, and safety for a better future.</p>
         </div>
 
-        <div class = "additional_info">
-
-            <div class="quick_links">
+        <div id="quick_links">
             <h3>Quick Links</h3>
-            
-            <div>
-                <a href="index.html">Home</a>
-                <a href="health_page.html">Health</a>
-                <a href="saftey_page.html">Safety</a>
-                <a href="education_page.html">Education</a>
-                <a href="crisis_page.html">Crisis Resources</a>
-            </div>
-            
-            </div>
 
-            <div class="follow_us">
-                <h3>Follow Us</h3>
-                <div>
-                    <img src="images/pinterest_icon.svg" alt="Pinterest icon" class="icons">
-                    <img src="images/youtube_icon.svg" alt="Youtube icon" class="icons">
-                    <img src="images/instagram_icon.svg" alt="Instagram icon" class="icons">
+            <a href="index.html">Home</a>
+            <a href="health_page.html">Health</a>
+            <a href="saftey_page.html">Safety</a>
+            <a href="education_page.html">Education</a>
+            <a href="crisis_page.html">Crisis Resources</a>
+        </div>
 
-                </div>
-            </div>
-
+        <div id="follow_us">
+            <h3>Contact Us</h3>
+            <img src="#" alt="Facebook icon">
+            <img src="#" alt="Twitter icon">
+            <img src="#" alt="Instagram icon">
         </div>
 
         <hr>
-        <p class="signature"> © 2026 LittleLifelines Nonprofit. All rights reserved.</p>
+        <p>2026 LittleLifelines Nonprofit. All rights reserved.</p>
 
     </footer>
 </body>
