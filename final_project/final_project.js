@@ -52,7 +52,7 @@ const health_info = [
     {
         name: "HealthWell Foundation",
         description: "Helps families cover out-of-pocket medical costs such as co-pays, premiums, and medications. ",
-        imgsrc: "images/health_well",
+        imgsrc: "images/health_well.jpg",
         imgalt: "HealthWell Foundation Logo",
         tags: ["Medical Funding"],
         web_link: "https://www.healthwellfoundation.org/contact/?gad_source=1&gad_campaignid=6645960225&gbraid=0AAAAADt7TMNTti4UrfVlBIIfW2sTtNQMx&gclid=CjwKCAjw-J3OBhBuEiwAwqZ_hy2rDG2niXC5QOgeRrsaWxYDed71yXBPRjrLQ_EeL46viDzihFPJzhoC6n0QAvD_BwE"
@@ -196,7 +196,7 @@ const safety_info = [
     {
         name: "La Casa de Las Madres",
         description: "Provides 24/7 crisis hotlines and family violence shelters",
-        imgsrc: "images/la_cas_madres",
+        imgsrc: "images/la_cas_madres.png",
         imgalt: "La Casa de Las Madres Logo",
         tags: ["Safety Resources", "Crisis Support", "Housing"],
         web_link: "https://www.lacasa.org/"
@@ -253,28 +253,43 @@ const safety_info = [
 ]
 
 /* Get Elements */
-const searchInput = document.querySelector(".search");
+const healthSearchInput = document.getElementById("healthSearch");
+const safetySearchInput = document.getElementById("safetySearch");
+const edSearchInput = document.getElementById("edSearch");
+
 const searchBtn = document.querySelector("button");
 const safety_container = document.getElementById("safety_cards");
 const health_container = document.getElementById("health_cards");
 const education_container = document.getElementById("education_cards");
 const tag_container = document.querySelector(".card_tags");
 const modal = document.querySelector("dialog");
-const nav_link = document.querySelector('.active');
+const nav_link = document.querySelector('.nav_links_container');
 const btn = document.querySelector('.menu-btn');
 
 
 /* Event Listener */
 searchBtn.addEventListener("click",(e)=>{
    e.preventDefault();
-  /* Get info from user input */
-  const phrase = searchInput.value.toLowerCase();
-  const results = nameSearch(phrase);
-  render(results);
+
+  /* Get health info from user input */
+  const h_phrase = healthSearchInput.value.toLowerCase();
+  const h_results = healthNameSearch(h_phrase);
+  healthRender(h_results);
+
+  /* Get safety info from user input */
+  const s_phrase = safetySearchInput.value.toLowerCase();
+  const s_results = safetyNameSearch(s_phrase);
+  safetyRender(s_results);
+
+  /* Get education info from user input */
+  const e_phrase = edSearchInput.value.toLowerCase();
+  const e_results = educationNameSearch(e_phrase);
+  educationRender(e_results);
 
 });  
 
 btn.addEventListener('click',() =>{
+    console.log("clicked");
     nav_link.classList.toggle('active');
     
 });
@@ -304,75 +319,140 @@ function educationNameSearch(phrase){
   
 };
 
-/* Adds cards to the screen */
-function render(card){ 
-  hike_container.innerHTML = " ";
 
-  hikes.forEach((hike) =>{
-    const div = document.createElement('div');
-    div.classList.add("hike");
-    div.classList.add(hike.stub);
+/* Adds health nonprofits to the screen */
+function healthRender(nps){
+    health_container.innerHTML = "";
 
-    div.innerHTML = `
-      <h2>${hike.name}</h2>
-      <img src ="${hike.imgSrc}" alt ="${hike.imgAlt}">
-      <p>${hike.description}</p>
-      <p id ="distance">Distance: ${hike.distance}</p>
-      <button class ="directionBtn"> Directions</button>
-  `;
+    nps.forEach((np) =>{
+        const newDiv = document.createElement("div");
+        newDiv.classList.add("health_np_card");
 
-  //Create tag container
-  const tagDiv = document.createElement("div");
-  tagDiv.classList.add("hike-tags");
-  tagBtn(hike,tagDiv);
+        newDiv.innerHTML = `
+             <img class="card-img" src = "${np.imgsrc}" alt= "${np.imgalt}">
+            
+                <div class="np_info">
+                    <a href="${np.web_link}">${np.name}</a>
+                    <p class="description">${np.description}</p>
+                </div>
+        `;
 
-  //Adds this to the hike container to make it appear
-  div.appendChild(tagDiv)
+        const npInfo = newDiv.querySelector(".np_info");
 
+        //Create tags container
+        const tagDiv = document.createElement("div");
+        tagDiv.classList.add("np-tags");
+        tagBtn(np,tagDiv);
 
-  //Creating difficulty div
-  const diffDiv = document.createElement("div");
-  diffDiv.classList.add("rating");
-  diffDiv.innerHTML = increaseDifficulty(hike.difficulty);
-  div.appendChild(diffDiv);
+        //Adds this to the health container to make it appear
+        npInfo.appendChild(tagDiv);
 
-  //Adds directions to modal
-  const directionBtn = div.querySelector(".directionBtn");
-
-  directionBtn.addEventListener("click", () => {
-    generateDirections(hike);
-    modal.showModal();
-  });
-
-  //Adds the hike container to the screen
-  hike_container.appendChild(div);
-  });
+        //Adds the health card container to the screen
+        health_container.appendChild(newDiv);
+    })
 }
 
+/* Adds education nonprofits to the screen */
+function educationRender(nps){
+    education_container.innerHTML = "";
+
+    nps.forEach((np) =>{
+        const newDiv = document.createElement("div");
+        newDiv.classList.add("ed_np_card");
+
+        newDiv.innerHTML = `
+             <img class="card-img" src = "${np.imgsrc}" alt= "${np.imgalt}">
+            
+                <div class="np_info">
+                    <a href="${np.web_link}">${np.name}</a>
+                    <p class="description">${np.description}</p>
+                </div>
+        `;
+
+        const npInfo = newDiv.querySelector(".np_info");
+
+        //Create tags container
+        const tagDiv = document.createElement("div");
+        tagDiv.classList.add("np-tags");
+        tagBtn(np,tagDiv);
+
+        //Adds this to the safety container to make it appear
+        npInfo.appendChild(tagDiv);
+
+        //Adds the education card container to the screen
+        education_container.appendChild(newDiv);
+    })
+}
+
+/* Adds safety nonprofits to the screen */
+function safetyRender(nps){
+    safety_container.innerHTML = "";
+
+    nps.forEach((np) =>{
+        const newDiv = document.createElement("div");
+        newDiv.classList.add("safety_np_card");
+
+        newDiv.innerHTML = `
+             <img class="card-img" src = "${np.imgsrc}" alt= "${np.imgalt}">
+            
+                <div class="np_info">
+                    <a href="${np.web_link}">${np.name}</a>
+                    <p class="description">${np.description}</p>
+                </div>
+        `;
+
+        const npInfo = newDiv.querySelector(".np_info");
+
+        //Create tags container
+        const tagDiv = document.createElement("div");
+        tagDiv.classList.add("np-tags");
+        tagBtn(np,tagDiv);
+
+        //Adds this to the safetycontainer to make it appear
+        npInfo.appendChild(tagDiv);
+
+        //Adds the safety cards container to the screen
+        safety_container.appendChild(newDiv);
+    })
+}
+
+/* Creates function that adds the tags */
+function tagBtn(np,container){
+    np.tags.forEach((tag)=>{
+        const btn = document.createElement("button");
+        btn.textContent = tag;
+        container.appendChild(btn);
+    })
+}
+
+healthRender(health_info);
+safetyRender(safety_info);
+educationRender(education_info);
 
 
 
+/*  <section class="card_content">
+            <div class="card">
+                <img src="images/uhccf.png" alt="UHCCF Logo">
+                <div class="text">
+                    <h2>United Healthcare Children's Foundation</h2>
+                    <p>Provides medical grants for expenses that are not covered by health insurance</p>
+                    <div class="card_tags">
+                        <button>Medical Funding</button>
+                    </div>
+                </div>
+            </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <div class="card">
+                <img src="images/ipu.png" alt="IPU Logo">
+                <div class="text">
+                    <h2>Idaho Parents Unlimited</h2>
+                    <p>Helps families of children with special needs get the support they need, from funding to training</p>
+                    <div class="card_tags">
+                        <button>Disability Support</button>
+                        <button>Medical Funding</button>
+                    </div>
+                </div>
+            </div>
+            
+             */

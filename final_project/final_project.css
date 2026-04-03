@@ -1,35 +1,68 @@
+body{
+    font-family: 'Georgia';
+}
+/* Overall Page Styles*/
+
 /* Navigation Bar*/
 nav{
     display:flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
     background-color: white;
+    padding: 10px 15px;
     width:100%;
+    position: relative;
 }
-#nav_logo_section{
+.nav_logo_section{
     display: flex;
-    gap: 5px;
+    gap: 8px;
+    align-items: center;
 }
-#nav_logo_section h4{
+.nav_logo_section h4{
     color: #f25f5c;
     font-size: 20px;
+    font-family: 'Bagel Fat One';
 }
-#logo{
-    width: 15%;
-    height: auto;
+.logo{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
 }
-#nav_links_container a{
+.nav_links_container{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(-50%);
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 50%;
+    z-index: 1000;
+}
+.nav_links_container.active{
+    display: flex;
+    max-height: 600px;
+}
+.nav_links_container a{
+    display: block;
     padding: 20px;
     color: black;
-    display: block;
     text-decoration: none;
+    width: 100%;
+    text-align: center;
 }
-nav a:hover {
-    color: #616061;
+
+.nav_links_container a:hover {
+    color: #a332a3;
+    background-color: rgb(247, 241, 241);
 } 
+
 .menu-btn {
     cursor: pointer;
     border: none;
     background-color: transparent;
+    margin-right: 20px;
 }
 .bar1, .bar2, .bar3 {
     width: 30px;
@@ -37,21 +70,82 @@ nav a:hover {
     background-color: rgb(122, 119, 119);
     margin: 5px 0;
 }
-nav.active{
-    display: block;
+
+/* Footer */
+footer{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+    margin-top: 10px;
+    background-image:linear-gradient(to bottom, white, rgb(253, 240, 200), rgb(220, 175, 40), #f25f5c);
 }
-.menu-btn .bar1 {
-  transform: translate(0, 8px) rotate(-45deg);
+.footer_logo_section{
+    display: flex;
+    gap: 8px;
+    align-items: center;
 }
-.menu-btn .bar2 {
-    opacity: 0;
+.footer_logo_section h3{
+    color: lightcoral;
+    font-family: 'Bagel Fat One';
 }
-.menu-btn .bar3 {
-  transform: translate(0, -10px) rotate(45deg);
+/* Footer Mission Statement*/
+.mission_info{
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.mission_info p{
+    color:black;
+}
+/* Footer Quick Links*/
+.quick_links h3{
+    color:rgb(19, 12, 12);
+}
+.quick_links div{
+    display: flex;
+    flex-direction: column;
+}
+.quick_links div a{
+    text-decoration: none;
+    padding: 10px;
+}
+.quick_links{
+    display: flex;
+    flex-direction: column;
+}
+.follow_us{
+    display: flex;
+    flex-direction: column;
+}
+.icons{
+    padding: 10px;
+    width: 20px;
+}
+.follow_us div{
+    display: flex;
+    flex-direction: row;
+}
+.additional_info{
+    display: flex;
+    flex-direction: row;
+    gap: 55px;
+}
+/* Bottom of the Footer*/
+footer hr{
+    width: 100%;
+    margin: 20px 0;
+}
+.signature{
+    text-align: center;
 }
 
+/* Home Page Styles*/
+
 /*Home Page Header Banner*/
-#home_page_intro h1, p{
+#home_page_intro h1,
+#home_page_intro p{
     color:white;
 }
 #home_page_intro div{
@@ -72,88 +166,204 @@ nav.active{
     border: none;
     margin-top: 15px;
     margin-bottom: 15px;
+
 }
-#home_page_intro button:hover{
+.homeBtns:hover{
     background-color: rgb(250, 247, 247);
+    transform: scale(1.05);
 }
 #home_page_intro{
-    background-image:linear-gradient(150deg,rgb(168, 60, 182), rgb(239, 119, 237),#f25f5c,rgb(220, 175, 40));
+    background-image:linear-gradient(150deg,rgb(160, 56, 171), rgb(238, 148, 250),#f25f5c,rgb(220, 175, 40));
     padding: 25px;
+}
+#home_page_intro h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 /* Home Page Main Information */
 #home_main_info{
     text-align: center;
-    margin: 50px;
-    margin: auto;
+    margin: 50px auto;
     width:100%;
 }
 #nonprofit_cards{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     gap: 20px;
+}
+#nonprfit_cards div{
+    overflow: hidden;
 }
 #nonprofit_cards div img{
     width: 200px;
     border-radius: 10px;
-    box-shadow: 10px 10px 5px lightgrey;
+    box-shadow: 3px 5px 10px rgb(113, 106, 113);
 }
-/* !!!! Move statements over the images */
 #nonprofit_cards div p{
    color: black;
 }
 #nonprofit_cards div img:hover{
     transform: scale(1.1);
 }
-/*#nonprofit_cards div img:nth-child(2){
-    border: 2px solid;
-}
-*/
 
 /* Mission Statement*/
 #home_second_info{
+    align-items: center;
+    gap: 20px;
     color:black;
-    padding: 10px;
+    padding: 20px;
     width: 100%;
     margin: 15px;
 }
+#mission_statement{
+    display: flex;
+}
+#mission_statement div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 #mission_statement p{
     color: black;
-    width: 80%;
+    max-width: fit-content;
     font-size: 18px;
+    line-height: 1.5;
+    margin: 0px;
 }
 #mission_statement img{
-    width: 90%;
+    display: none;
+    width: 50%;
+    height: 50%;
     border-radius: 10px;
     margin-top:10px;
     margin-bottom:10px;
 }
 #make_a_difference{
     text-align: center;
-    background-image:linear-gradient(150deg,rgb(168, 60, 182), rgb(239, 119, 237),#f25f5c);
+    background-image:linear-gradient(to right,rgb(160, 56, 171), rgb(239, 119, 237), rgb(234, 134, 134));
     width:100%;
-    margin-bottom: 10px;
-    padding:10px;
+    padding:30px;
 }
 #make_a_difference p{
     color:black;
 }
-#suggestionBtn{
-    
+
+/* Crisis Page Styles */
+
+/* Crisis Resources Banner */
+#crisis_page_intro{
+    background-image:linear-gradient(180deg,#f25f5c,#ec7472,rgb(220, 175, 40));
+    padding: 20px;
+    color: white;
+    margin-bottom: 0px;
+}
+#crisis_page_intro h1{
+    font-size: 35px;
+}
+#crisis_page_intro p{
+    font-size: 20px;
+}
+#warning_info{
+    background-color: #fee7e7;
+    margin-top: 0px;
+    border-left: 2px solid rgb(175, 14, 14);
+    padding: 10px;
+}
+#warning_info p:nth-child(1){
+    color: rgb(117, 1, 1);
+    font-weight: bold;
 }
 
+/* Crisis Support Section */
+#crisis_resources, #safety_planning{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+#crisis_resources div {
+    border-radius: 10px;
+    box-shadow: 3px 5px 10px rgb(181, 175, 181);
+    padding: 10px;
+    width: 50%;
+    margin: 20px auto;
+    line-height: 1.5;
+    
+}
+#crisis_resources div p:nth-child(2){
+    color:rgb(16, 182, 146);
+    font-weight: bold;
+}
+#crisis_resources div:hover, #safety_planning div:hover{
+    transform: scale(1.1);
+}
 
+/* Safety Planning Section */
+#safety_planning div{
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: 3px 5px 10px rgb(181, 175, 181);
+    padding: 20px;
+    width: 60%;
+    margin: 20px auto;
+    line-height: 2.0;
+    background-color: #ffdedd;
 
+}
+#safety_planning div li{
+    list-style-position: inside;
+    list-style-type:square;
+}
+/* Child Pages */
 
+/* Search Container*/
+#search{
+    width: 100%;
+    border: 2px black solid;
+    border-radius: 5px;
+}
+.search-container{
+    position: relative;
+    margin: 0;
+}
 
-
-
-
-
+.search-container input{
+    width: 100%;
+    padding-right: 20px; 
+    height: 30px;
+}
+.search-icon{
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    margin: 0px;
+    padding: 0px;
+}
+#forSearch{
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    margin: 0px;
+    padding: 0px; 
+    background: none;
+    cursor: pointer;
+    border: none;
+}
 
 /*
 @media screen and (min-width:600px) {
+    .logo{
+        width:60px;
+        height:60px
+    }
     .menu-btn{
         display:none;
     }
@@ -164,6 +374,10 @@ nav.active{
         text-align: right;
         display: inline-block;
     }
+    .nav_logo_section h4{
+        font-size: 20px;
+    }
+
 
 }
 */
