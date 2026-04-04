@@ -329,7 +329,6 @@ footer hr{
     position: relative;
     margin: 0;
 }
-
 .search-container input{
     width: 100%;
     padding-right: 20px; 
@@ -344,7 +343,7 @@ footer hr{
     margin: 0px;
     padding: 0px;
 }
-#forSearch{
+.forSearch{
     position: absolute;
     right: 5px;
     top: 50%;
@@ -357,6 +356,56 @@ footer hr{
     cursor: pointer;
     border: none;
 }
+
+/* Child Page Banners */
+#education_page_intro, #safety_page_intro, #health_page_intro{
+    background-image:linear-gradient(150deg,rgb(160, 56, 171), rgb(238, 148, 250),#f25f5c,rgb(220, 175, 40));
+    padding: 25px;
+}
+
+.health_np_card{
+    border-radius: 10px;
+    box-shadow: 3px 5px 10px rgb(181, 175, 181);
+    width: 50%;
+    margin: 20px auto;
+    line-height: 1.5;
+}
+/* Fix image*/
+.health_np_card img{
+    overflow: hidden;
+    width:fit-content;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.health_np_card img:hover{
+   transform: scale(1.1);
+   transition: transform 0.4s;
+}
+.health_np_info{
+    padding: 20px;
+}
+.health_np_info a{
+    text-decoration: none;
+    color: black;
+}
+.health_np_info a:hover{
+    text-decoration: none;
+    color: rgb(97, 14, 104);
+}
+.health_np_info p{
+    text-decoration: none;
+    color: rgb(84, 83, 83);
+}
+
+
+
+
+
+
+
+
+
+
 
 /*
 @media screen and (min-width:600px) {

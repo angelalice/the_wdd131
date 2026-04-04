@@ -331,13 +331,13 @@ function healthRender(nps){
         newDiv.innerHTML = `
              <img class="card-img" src = "${np.imgsrc}" alt= "${np.imgalt}">
             
-                <div class="np_info">
+                <div class="health_np_info">
                     <a href="${np.web_link}">${np.name}</a>
                     <p class="description">${np.description}</p>
                 </div>
         `;
 
-        const npInfo = newDiv.querySelector(".np_info");
+        const npInfo = newDiv.querySelector(".health_np_info");
 
         //Create tags container
         const tagDiv = document.createElement("div");
@@ -363,13 +363,13 @@ function educationRender(nps){
         newDiv.innerHTML = `
              <img class="card-img" src = "${np.imgsrc}" alt= "${np.imgalt}">
             
-                <div class="np_info">
+                <div class="ed_np_info">
                     <a href="${np.web_link}">${np.name}</a>
                     <p class="description">${np.description}</p>
                 </div>
         `;
 
-        const npInfo = newDiv.querySelector(".np_info");
+        const npInfo = newDiv.querySelector(".ed_np_info");
 
         //Create tags container
         const tagDiv = document.createElement("div");
@@ -395,13 +395,13 @@ function safetyRender(nps){
         newDiv.innerHTML = `
              <img class="card-img" src = "${np.imgsrc}" alt= "${np.imgalt}">
             
-                <div class="np_info">
+                <div class="safety_np_info">
                     <a href="${np.web_link}">${np.name}</a>
                     <p class="description">${np.description}</p>
                 </div>
         `;
 
-        const npInfo = newDiv.querySelector(".np_info");
+        const npInfo = newDiv.querySelector(".safety_np_info");
 
         //Create tags container
         const tagDiv = document.createElement("div");
@@ -430,29 +430,3 @@ safetyRender(safety_info);
 educationRender(education_info);
 
 
-
-/*  <section class="card_content">
-            <div class="card">
-                <img src="images/uhccf.png" alt="UHCCF Logo">
-                <div class="text">
-                    <h2>United Healthcare Children's Foundation</h2>
-                    <p>Provides medical grants for expenses that are not covered by health insurance</p>
-                    <div class="card_tags">
-                        <button>Medical Funding</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="images/ipu.png" alt="IPU Logo">
-                <div class="text">
-                    <h2>Idaho Parents Unlimited</h2>
-                    <p>Helps families of children with special needs get the support they need, from funding to training</p>
-                    <div class="card_tags">
-                        <button>Disability Support</button>
-                        <button>Medical Funding</button>
-                    </div>
-                </div>
-            </div>
-            
-             */
