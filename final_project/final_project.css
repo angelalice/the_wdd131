@@ -245,6 +245,7 @@ footer hr{
     background-image:linear-gradient(to right,rgb(160, 56, 171), rgb(239, 119, 237), rgb(234, 134, 134));
     width:100%;
     padding:30px;
+    margin-bottom: 35px;
 }
 #make_a_difference p{
     color:black;
@@ -297,12 +298,12 @@ footer hr{
     color:rgb(16, 182, 146);
     font-weight: bold;
 }
-#crisis_resources div:hover, #safety_planning div:hover{
+#crisis_resources div:hover, #s_text div:hover{
     transform: scale(1.1);
 }
 
 /* Safety Planning Section */
-#safety_planning div{
+#s_text div{
     text-align: left;
     border-radius: 10px;
     box-shadow: 3px 5px 10px rgb(181, 175, 181);
@@ -368,18 +369,15 @@ footer hr{
     margin-bottom: 25px;
 }
 
-/* Health Cards*/
+/* Child Page Cards*/
 .health_np_card, .ed_np_card, .safety_np_card{
     border-radius: 10px;
     box-shadow: 3px 5px 10px rgb(181, 175, 181);
     width: 50%;
     margin: 35px auto;
     line-height: 1.5;
-    /*display: flex;
-    flex-direction: column; */
     overflow: hidden;
 }
-/* Fix image*/
 .health_np_card img, .ed_np_card img, .safety_np_card img{
     height: auto;
     width:100%;
@@ -387,6 +385,7 @@ footer hr{
     border-top-right-radius: 10px;
     object-fit: cover;
     order:1;
+    padding:10px;
 }
 .health_np_card img:hover, .ed_np_card img:hover, .safety_np_card img:hover{
    transform: scale(1.1);
@@ -425,26 +424,85 @@ footer hr{
 }
 
 
-
-
-
-
 @media screen and (min-width:600px) {
+    #home_second_info{
+        padding: 20px;
+        max-width: 1250px;
+        margin: auto;
+        margin-bottom: 35px;
+    }
+    #home_second_info h2{
+        margin-bottom: 20px;
+    }
     #mission_statement{
         display: flex;
-        gap: 20px;
+        gap: 50px;
+        max-height: 1000px;
+        max-width: 1200px;
+        margin: auto;
+        margin-top: 25px;
+        margin-bottom: 45px;
+        align-items: center;
     }
     #mission_statement img{
         display: inline;
         width: 50%;
-        height: 10%;
+        height:auto;
         border-radius: 10px;
         margin-top:10px;
         margin-bottom:10px;
+        margin-right: 25px;
     }
-    #mission_statement h2{
-        margin: 30px;
+    #health_cards, #education_cards, #safety_cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        
     }
-
-
+    .health_np_card, .ed_np_card, .safety_np_card{
+        width: 70%;
+    }
+    .health_np_info, .ed_np_info, .safety_np_info{
+        
+        display: flex;
+        flex-direction: column;
+    }
+    .search-container{
+        width:50%; 
+    }
+    #crisis_resources{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1080px;
+        margin: auto;
+    }
+    #crisis_resources h2{
+        margin-top: 45px;
+        margin-bottom: 45px;
+        grid-column: 1/3;
+    }
+    #safety_planning{
+        max-width: 1080px;
+        margin: 45px auto 45px auto ;
+    }
+    #safety_planning h2{
+        max-width: 1080px;
+        margin: 45px auto 45px auto ;
+    }
+    #s_text{
+        display:flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+    #nonprofit_cards{
+        gap: 60px;
+        margin-top: 55px;
+    }
+    #home_main_info h2{
+        margin-bottom: 40px;
+    }
+    #nonprofit_cards div img{
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 3px 5px 10px rgb(113, 106, 113);
+    }
 }
