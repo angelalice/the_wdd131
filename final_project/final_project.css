@@ -110,6 +110,10 @@ footer{
 .quick_links div a{
     text-decoration: none;
     padding: 10px;
+    color: #090909;
+}
+.quick_links div a:hover{
+    color: #9c0fb1;
 }
 .quick_links{
     display: flex;
@@ -310,7 +314,7 @@ footer hr{
     width: 60%;
     margin: 20px auto;
     line-height: 2.0;
-    background-color: #ffdedd;
+    background-color: rgb(255, 222, 221,0.5);
 
 }
 #safety_planning div li{
@@ -363,12 +367,15 @@ footer hr{
     padding: 25px;
 }
 
+/* Health Cards*/
 .health_np_card{
     border-radius: 10px;
     box-shadow: 3px 5px 10px rgb(181, 175, 181);
     width: 50%;
     margin: 20px auto;
     line-height: 1.5;
+    display: flex;
+    flex-direction: column;
 }
 /* Fix image*/
 .health_np_card img{
@@ -376,6 +383,7 @@ footer hr{
     width:fit-content;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    order:1;
 }
 .health_np_card img:hover{
    transform: scale(1.1);
@@ -387,6 +395,7 @@ footer hr{
 .health_np_info a{
     text-decoration: none;
     color: black;
+    order: 3;
 }
 .health_np_info a:hover{
     text-decoration: none;
@@ -395,6 +404,15 @@ footer hr{
 .health_np_info p{
     text-decoration: none;
     color: rgb(84, 83, 83);
+    order: 4;
+}
+.np-tags button{
+    padding: 5px;
+    margin: 0px 2px;
+    border-radius: 10px;
+    border: 0px solid;
+    background-color: rgb(243, 194, 240);
+    order: 2;
 }
 
 
