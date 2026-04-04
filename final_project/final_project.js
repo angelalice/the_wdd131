@@ -180,7 +180,7 @@ const safety_info = [
     {
         name: "Charlie's House",
         description: "Offers resources to help parents and caregivers prevent accidents and fatal injuries to kids in and around the home",
-        imgsrc: "images/charlie's_house",
+        imgsrc: "images/charlie's_house.png",
         imgalt: "Charlie's House",
         tags: ["Familial Support"],
         web_link: "https://www.charlieshouse.org/"
@@ -256,37 +256,68 @@ const safety_info = [
 const healthSearchInput = document.getElementById("healthSearch");
 const safetySearchInput = document.getElementById("safetySearch");
 const edSearchInput = document.getElementById("edSearch");
-
-const searchBtn = document.querySelector("button");
 const safety_container = document.getElementById("safety_cards");
 const health_container = document.getElementById("health_cards");
 const education_container = document.getElementById("education_cards");
+
+const searchBtns = document.querySelectorAll(".forSearch");
 const tag_container = document.querySelector(".card_tags");
-const modal = document.querySelector("dialog");
 const nav_link = document.querySelector('.nav_links_container');
 const btn = document.querySelector('.menu-btn');
 
+/* Doesn't allow the render to run if it's null  */
+if (health_container) {
+    healthRender(health_info)
+} 
+if (safety_container) {
+    safetyRender(safety_info)
+} 
+if (education_container){
+    educationRender(education_info)
+};
+
 
 /* Event Listener */
-searchBtn.addEventListener("click",(e)=>{
-   e.preventDefault();
+searchBtns.forEach( (btn)=>{
+    btn.addEventListener("click",(e)=>{
+        e.preventDefault();
 
-  /* Get health info from user input */
-  const h_phrase = healthSearchInput.value.toLowerCase();
-  const h_results = healthNameSearch(h_phrase);
-  healthRender(h_results);
+        /* If statement- prevents crash so code only runs if input exists */
+        if(healthSearchInput){
+            /* Get health info from user input */
+            const h_phrase = healthSearchInput.value.toLowerCase();
+            const h_results = healthNameSearch(h_phrase);
 
-  /* Get safety info from user input */
-  const s_phrase = safetySearchInput.value.toLowerCase();
-  const s_results = safetyNameSearch(s_phrase);
-  safetyRender(s_results);
+            /* Doesn't allow the render to run if it's null  */
+            if(health_container){
+                healthRender(h_results);
+            }
+        }
+        
+        if(safetySearchInput){
+            /* Get safety info from user input */
+            const s_phrase = safetySearchInput.value.toLowerCase();
+            const s_results = safetyNameSearch(s_phrase);
+            console.log(document.getElementById("safety_cards"));
+            if(safety_container){
+                safetyRender(s_results);
+            }
+        }
+        
+        if(edSearchInput){
+            /* Get education info from user input */
+            const e_phrase = edSearchInput.value.toLowerCase();
+            const e_results = educationNameSearch(e_phrase);
+            educationRender(e_results);
+            console.log("safety_container:", safety_container);
+        }
+        
 
-  /* Get education info from user input */
-  const e_phrase = edSearchInput.value.toLowerCase();
-  const e_results = educationNameSearch(e_phrase);
-  educationRender(e_results);
+     
 
-});  
+    });
+})
+
 
 btn.addEventListener('click',() =>{
     console.log("clicked");
@@ -322,6 +353,10 @@ function educationNameSearch(phrase){
 
 /* Adds health nonprofits to the screen */
 function healthRender(nps){
+    if(!health_container){
+        // If it does not exist stop running this function
+        return;
+    }
     health_container.innerHTML = "";
 
     nps.forEach((np) =>{
@@ -337,7 +372,7 @@ function healthRender(nps){
                 </div>
         `;
 
-        const npInfo = newDiv.querySelector(".health_np_info");
+        const healthNpInfo = newDiv.querySelector(".health_np_info");
 
         //Create tags container
         const tagDiv = document.createElement("div");
@@ -345,7 +380,7 @@ function healthRender(nps){
         tagBtn(np,tagDiv);
 
         //Adds this to the health container to make it appear
-        npInfo.appendChild(tagDiv);
+        healthNpInfo.appendChild(tagDiv);
 
         //Adds the health card container to the screen
         health_container.appendChild(newDiv);
@@ -354,13 +389,16 @@ function healthRender(nps){
 
 /* Adds education nonprofits to the screen */
 function educationRender(nps){
+    if(!education_container){
+        return;
+    }
     education_container.innerHTML = "";
 
     nps.forEach((np) =>{
-        const newDiv = document.createElement("div");
-        newDiv.classList.add("ed_np_card");
+        const new_Div = document.createElement("div");
+        new_Div.classList.add("ed_np_card");
 
-        newDiv.innerHTML = `
+        new_Div.innerHTML = `
              <img class="card-img" src = "${np.imgsrc}" alt= "${np.imgalt}">
             
                 <div class="ed_np_info">
@@ -369,7 +407,7 @@ function educationRender(nps){
                 </div>
         `;
 
-        const npInfo = newDiv.querySelector(".ed_np_info");
+        const npInfo = new_Div.querySelector(".ed_np_info");
 
         //Create tags container
         const tagDiv = document.createElement("div");
@@ -380,12 +418,16 @@ function educationRender(nps){
         npInfo.appendChild(tagDiv);
 
         //Adds the education card container to the screen
-        education_container.appendChild(newDiv);
+        education_container.appendChild(new_Div);
     })
 }
 
 /* Adds safety nonprofits to the screen */
 function safetyRender(nps){
+
+    if(!safety_container){
+        return;
+    }
     safety_container.innerHTML = "";
 
     nps.forEach((np) =>{
@@ -408,11 +450,12 @@ function safetyRender(nps){
         tagDiv.classList.add("np-tags");
         tagBtn(np,tagDiv);
 
-        //Adds this to the safetycontainer to make it appear
+        //Adds this to the safety container to make it appear
         npInfo.appendChild(tagDiv);
 
         //Adds the safety cards container to the screen
         safety_container.appendChild(newDiv);
+
     })
 }
 
@@ -425,6 +468,7 @@ function tagBtn(np,container){
     })
 }
 
+/* Calls this function */
 healthRender(health_info);
 safetyRender(safety_info);
 educationRender(education_info);
