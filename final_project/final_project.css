@@ -250,6 +250,9 @@ footer hr{
 #make_a_difference p{
     color:black;
 }
+#suggestionBtn{
+    text-decoration: none;
+}
 
 /* Crisis Page Styles */
 
@@ -423,7 +426,8 @@ footer hr{
     padding-bottom:15px;
 }
 #form_warning{
-    color: red;;
+    color: red;
+    text-align: center;
 }
 
 @media screen and (min-width:600px) {
