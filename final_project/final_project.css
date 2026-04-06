@@ -158,6 +158,8 @@ footer hr{
 }
 #home_page_intro p{
     font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 #home_page_intro h1{
     font-size: 35px;
