@@ -373,6 +373,7 @@ footer hr{
     background-image:linear-gradient(150deg,rgb(160, 56, 171), rgb(238, 148, 250),#f25f5c,rgb(220, 175, 40));
     padding: 25px;
     margin-bottom: 25px;
+    color: white;
 }
 
 /* Child Page Cards*/
