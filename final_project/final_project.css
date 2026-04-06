@@ -173,6 +173,9 @@ footer hr{
     margin-bottom: 15px;
 
 }
+#home_mainBtn{
+    text-decoration: none;
+}
 .homeBtns:hover{
     background-color: rgb(250, 247, 247);
     transform: scale(1.05);
